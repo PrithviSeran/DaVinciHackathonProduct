@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ServeEasy</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-blue-900 text-white text-center py-5">
+    <h1 class="text-4xl">ServeEasy</h1>
+</header>
+
+<nav class="bg-blue-900 text-white text-center py-2">
+    <ul>
+        <form method="POST">
+            <button class="inline mx-4" name="action" value="Home">Home</button>
+            <button class="inline mx-4" name="action" value="About">About</button>
+            <button class="inline mx-4" name="action" value="Contact">Contact</button>
+        </form>
+    </ul>
+</nav>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-8">
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form class="w-full max-w-lg">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                        Name
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        Email
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Your Email">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                        Message
+                    </label>
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Your Message" rows="6"></textarea>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-gray-300 py-4 text-center">
+        <div class="container mx-auto text-gray-700">
+            <p>&copy; 2023 ServeEasy - Your Trusted Service Finder</p>
+        </div>
+    </footer>
+</body>
+</html>

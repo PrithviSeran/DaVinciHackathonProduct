@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill out all the necessary information to become a service provider</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-blue-900 text-white text-center py-5">
+    <h1 class="text-4xl">ServeEasy</h1>
+</header>
+
+<nav class="bg-blue-900 text-white text-center py-2">
+    <ul>
+        <form method="POST">
+            <button class="inline mx-4" name="action" value="Home">Home</button>
+            <button class="inline mx-4" name="action" value="About">About</button>
+            <button class="inline mx-4" name="action" value="Contact">Contact</button>
+        </form>
+    </ul>
+</nav>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-md mx-auto bg-white p-6 rounded shadow-lg">
+        <h1 class="text-2xl font-semibold mb-4">Fill out all the necessary information to become a service provider</h1>
+        
+        <form action="/fill_info" method="POST">
+            <!-- Full Name -->
+            <div class="mb-4">
+                <label for="full-name" class="block text-gray-600">Full Name</label>
+                <input type="text" id="full-name" name="full-name" class="w-full p-2 border rounded" required>
+            </div>
+            
+            <!-- Display Name -->
+            <div class="mb-4">
+                <label for="display-name" class="block text-gray-600">Display Name</label>
+                <input type="text" id="display-name" name="display-name" class="w-full p-2 border rounded" required>
+            </div>
+
+            <!-- Profile Picture -->
+            <div class="mb-4">
+                <label for="profile-picture" class="block text-gray-600">Profile Picture</label>
+                <input type="file" id="profile-picture" name="profile-picture" class="w-full p-2 border rounded" required>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-4">
+                <label for="description" class="block text-gray-600">Description</label>
+                <textarea id="description" name="description" class="w-full p-2 border rounded" required></textarea>
+            </div>
+
+            <!-- Languages -->
+            <div class="mb-4">
+                <label for="languages" class="block text-gray-600">Languages</label>
+                <input type="text" id="languages" name="languages" class="w-full p-2 border rounded" required>
+            </div>
+
+
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit</button>
+        
+        </form>
+        
+    </div>
+    <footer class="bg-gray-300 py-4 text-center">
+        <div class="container mx-auto text-gray-700">
+            <p>&copy; 2023 ServeEasy - Your Trusted Service Finder</p>
+        </div>
+    </footer>
+</body>
+</html>

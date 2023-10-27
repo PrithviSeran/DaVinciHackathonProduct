@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rows with Outlines</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-blue-900 text-white text-center py-5">
+    <h1 class="text-4xl">ServeEasy</h1>
+</header>
+
+<nav class="bg-blue-900 text-white text-center py-2">
+    <ul>
+        <form method="POST">
+            <button class="inline mx-4" name="action" value="Home">Home</button>
+            <button class="inline mx-4" name="action" value="About">About</button>
+            <button class="inline mx-4" name="action" value="Contact">Contact</button>
+        </form>
+    </ul>
+</nav>
+<body class="bg-gray-100 p-6">
+    <div class="text-center">
+        <h1 class="text-4xl font-semibold mb-4">You are all set!</h1>
+        <h2 class="text-lg text-gray-600">You will soon see people who need your service below</h2>
+    </div>
+
+    <div class="mt-8 text-center">
+        <h3 class="text-2xl font-semibold mb-4">How our recomendation process works...</h3>
+        <p class="text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac est a ex accumsan volutpat. Nullam eu sapien non ex volutpat venenatis.
+        </p>
+        <p class="text-gray-700">
+            Aenean lacinia, justo non varius egestas, metus est condimentum erat, quis hendrerit dui augue eu leo.
+        </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto">
+        <!-- First Row -->
+        <h1>Your Requests:</h1>
+        <div class="max-w-3xl mx-auto border p-4 mb-4 rounded shadow-md hidden" id="hiddenElement">
+            <h3>Name: {{name}}</h3>
+            <h3>{{Need}}</h3>
+        </div>
+    </div>
+    <footer class="bg-gray-300 py-4 text-center">
+        <div class="container mx-auto text-gray-700">
+            <p>&copy; 2023 ServeEasy - Your Trusted Service Finder</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Wait for 3 seconds before showing the hidden element
+            setTimeout(function() {
+                document.getElementById("hiddenElement").classList.remove("hidden");
+            }, 5000); // 3000 milliseconds = 3 seconds
+        });
+    </script>
+</body>
+</html>

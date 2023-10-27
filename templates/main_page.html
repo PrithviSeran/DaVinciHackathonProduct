@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Fiverr-Like Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        
+        /* Custom CSS for the carousel */
+        .carousel-container {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+            white-space: nowrap; /* Prevent items from wrapping to the next line */
+        }
+
+        .carousel-item {
+            display: inline-block;
+            min-width: 300px; /* Adjust the width of each carousel item */
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .carousel-item button {
+            margin-top: 1rem;
+        }
+
+        .carousel-item .text-content {
+            margin-top: 1rem;
+        }
+
+
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-900 text-white text-center py-5">
+        <h1 class="text-4xl">ServeEasy</h1>
+    </header>
+
+    <nav class="bg-blue-900 text-white text-center py-2">
+        <ul>
+            <form method="POST">
+                <button class="inline mx-4" name="action" value="Home">Home</button>
+                <button class="inline mx-4" name="action" value="About">About</button>
+                <button class="inline mx-4" name="action" value="Contact">Contact</button>
+            </form>
+        </ul>
+    </nav>
+
+    <div class="container max-w-4xl mx-auto p-6">
+        <div class="input-container text-center mt-8">
+            <form method="POST">
+                <input name="fname" id="myInput" type="text" placeholder="Post your need..." class="w-3/4 p-2 border border-gray-300 rounded-md text-lg focus:border-blue-500" required>
+            
+                <!--<a href="create_an_account.html">-->
+                <button type="submit" name="action" value="Join-Now1" name = "service-button" id="myButton" class="search-button bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 cursor-pointer">Post</button>
+            </form>
+        </div>
+       
+        <div class="carousel-container py-2 flex"> <!-- Add the flex class to create a horizontal layout -->
+            <div class="carousel-item bg-white w-1/3 h-auto p-4 border">
+                <!-- Set to one-third width and let the height adjust to content -->
+                <!-- Carousel Item 1 Content -->
+                <h3 class="text-xl font-semibold whitespace-normal">Find Your Perfect Nanny</h3>
+                <p class="whitespace-normal text-content">At our platform, we understand the importance of finding the right nanny for your family. Our AI algorithm carefully matches you with experienced nannies who can take care of your kids with care and love.</p>
+                <form method="POST">
+                    <button type="submit" name="action" value="Housekeeper" name="service-button" id="myButton" class="search-button bg-blue-500 text-white px-6 py-2 rounded-md hover-bg-blue-600 cursor-pointer">Book Now</button>
+                </form>
+            </div>
+            
+            <div class="carousel-item bg-white w-1/3 h-auto p-4 border"> <!-- Set to one-third width and the same fixed height -->
+                <!-- Carousel Item 2 Content -->
+                <h3 class="text-xl font-semibold whitespace-normal">Discover Affordable Barbers</h3>
+                <p class="whitespace-normal">Looking for a skilled barber who won't break the bank? Our platform connects you with skilled barbers who provide high-quality services at a price that won't dent your wallet.</p>
+                <form method="POST">
+                    <button type="submit" name="action" value="Barber" name="service-button" id="myButton" class="search-button bg-blue-500 text-white px-6 py-2 rounded-md hover-bg-blue-600 cursor-pointer">Book Now</button>
+                </form>
+            </div>
+            
+            <div class="carousel-item bg-white w-1/3 h-auto p-4 border"> <!-- Set to one-third width and the same fixed height -->
+                <!-- Carousel Item 3 Content -->
+                <h3 class="text-xl font-semibold whitespace-normal">Effortless Grocery Shopping</h3>
+                <p class="whitespace-normal">We make grocery shopping a breeze. Our AI matches you with personal shoppers who can fulfill your grocery list and deliver it right to your doorstep. Say goodbye to long lines and crowded stores.</p>
+                <form method="POST">
+                    <button type="submit" name="action" value="Grocery-Shopper" name="service-button" id="myButton" class="search-button bg-blue-500 text-white px-6 py-2 rounded-md hover-bg-blue-600 cursor-pointer">Book Now</button>
+                </form>
+            </div>
+            
+            <div class="carousel-item bg-white w-1/3 h-auto p-4 border"> <!-- Set to one-third width and the same fixed height -->
+                <!-- Carousel Item 4 Content -->
+                <h3 class="text-xl font-semibold whitespace-normal">Reliable Housekeeping Services</h3>
+                <p class="whitespace-normal">Need a dedicated maid for household chores? We've got you covered. Our platform connects you with experienced housekeepers who can handle all your cleaning and organizing needs efficiently.</p>
+                <form method="POST">
+                    <button type="submit" name="action" value="Housekeeper" name="service-button" id="myButton" class="search-button bg-blue-500 text-white px-6 py-2 rounded-md hover-bg-blue-600 cursor-pointer">Book Now</button>
+                </form>
+            </div>
+            
+            <div class="carousel-item bg-white w-1/3 h-auto p-4 border"> <!-- Set to one-third width and the same fixed height -->
+                <!-- Carousel Item 5 Content -->
+                <h3 class="text-xl font-semibold whitespace-normal">Skilled Plumbers at Your Service</h3>
+                <p class="whitespace-normal">When plumbing issues arise, don't stress. Our AI recommends qualified plumbers who can tackle your plumbing problems, ensuring a hassle-free solution for your home.</p>
+                <form method="POST">
+                    <button type="submit" name="action" value="Plumber" name="service-button" id="myButton" class="search-button bg-blue-500 text-white px-6 py-2 rounded-md hover-bg-blue-600 cursor-pointer">Book Now</button>
+                </form>
+            </div>
+            
+            <!-- Add more carousel items as needed -->
+        </div>
+        
+
+        <div class="we-know-a-guy text-center mt-8 bg-blue-500 text-white p-4 rounded-lg">
+            <h2 class="text-3xl">We Know a Guy... for Anything</h2>
+            <div class="common-content flex mt-4">
+                <div class="common-text text-center">
+                    <h3 class="text-2xl">Your Trusted Service Finder</h3>
+                    <p>
+                        We're your go-to platform for finding the right person for any task. Our AI algorithm is designed to connect you with experts who can address your unique needs, whether it's for household chores, personal grooming, or any other service you require.
+                    </p>
+                </div>
+                <div class="common-image flex-1">
+                </div>
+            </div>
+            <div class="common-content flex mt-4">
+                <div class="common-image flex-1">
+                </div>
+                <div class="common-text text-center">
+                    <h3 class="text-2xl">Efficiency and Quality</h3>
+                    <p>
+                        We value efficiency and quality in the services we recommend. Let our platform connect you with the right professionals who are dedicated to providing top-notch services tailored to your specific requirements.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="help-out text-center mt-8">
+            <h2 class="text-3xl">See How You Can Help Out!</h2>
+            <div class="common-content flex mt-4">
+                <div class="common-text text-center">
+                    <h3 class="text-2xl">Join Our Network of Service Providers</h3>
+                    <p>
+                        Are you a skilled professional looking to offer your services to those in need? Join our platform as a service provider and connect with individuals seeking your expertise. Help make a positive impact in your community.
+                    </p>
+                </div>
+                <div class="common-image flex-1">
+                </div>
+            </div>
+        </div>
+        <div class="cta-button text-center mt-8">
+            <form method="POST">
+                <button type="submit" name="action" value="Join-Now" class="bg-green-500 text-white font-bold text-4xl px-10 py-4 rounded-full hover:bg-green-600 cursor-pointer">Join Now!</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-gray-300 py-4 text-center">
+        <div class="container mx-auto text-gray-700">
+            <p>&copy; 2023 ServeEasy - Your Trusted Service Finder</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
+

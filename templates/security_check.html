@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Check</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-blue-900 text-white text-center py-5">
+    <h1 class="text-4xl">ServeEasy</h1>
+</header>
+
+<nav class="bg-blue-900 text-white text-center py-2">
+    <ul>
+        <form method="POST">
+            <button class="inline mx-4" name="action" value="Home">Home</button>
+            <button class="inline mx-4" name="action" value="About">About</button>
+            <button class="inline mx-4" name="action" value="Contact">Contact</button>
+        </form>
+    </ul>
+</nav>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-md mx-auto bg-white p-6 rounded shadow-lg">
+        <h1 class="text-2xl font-semibold mb-4">Security Check</h1>
+        
+        <form action="/security_check" method="POST">
+            <!-- ID Upload -->
+            <div class="mb-4">
+                <label for="id-upload" class="block text-gray-600">Please enter a picture of a valid government-issued ID for verification</label>
+                <input type="file" id="id-upload" name="id-upload" accept="image/*" class="w-full p-2 border rounded" required>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+    <footer class="bg-gray-300 py-4 text-center">
+        <div class="container mx-auto text-gray-700">
+            <p>&copy; 2023 ServeEasy - Your Trusted Service Finder</p>
+        </div>
+    </footer>
+</body>
+</html>

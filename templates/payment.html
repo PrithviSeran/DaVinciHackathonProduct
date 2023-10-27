@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Checkout</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-blue-900 text-white text-center py-5">
+    <h1 class="text-4xl">ServeEasy</h1>
+</header>
+
+<nav class="bg-blue-900 text-white text-center py-2">
+    <ul>
+        <form method="POST">
+            <button class="inline mx-4" name="action" value="Home">Home</button>
+            <button class="inline mx-4" name="action" value="About">About</button>
+            <button class="inline mx-4" name="action" value="Contact">Contact</button>
+        </form>
+    </ul>
+</nav>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <div class="bg-white rounded-lg shadow-md p-8 max-w-md mx-auto">
+            <h1 class="text-2xl font-semibold mb-4">Payment Checkout</h1>
+            <form action="/payment" method="post">
+                <!-- Payment Details -->
+                <div class="mb-4">
+                    <label for="cardNumber" class="block text-gray-700">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" class="form-input" required>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="mb-4">
+                        <label for="expiryDate" class="block text-gray-700">Expiry Date</label>
+                        <input type="text" id="expiryDate" name="expiryDate" class="form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="cvv" class="block text-gray-700">CVV</label>
+                        <input type="text" id="cvv" name="cvv" class="form-input" required>
+                    </div>
+                </div>
+
+                <!-- Billing Information -->
+                <h2 class="text-xl font-semibold mt-6">Billing Information</h2>
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+
+                <!-- Payment Button -->
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none">Pay Now</button>
+            </form>
+        </div>
+    </div>
+    <footer class="bg-gray-300 py-4 text-center">
+        <div class="container mx-auto text-gray-700">
+            <p>&copy; 2023 ServeEasy - Your Trusted Service Finder</p>
+        </div>
+    </footer>
+</body>
+</html>
+

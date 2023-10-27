@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profession Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-blue-900 text-white text-center py-5">
+    <h1 class="text-4xl">ServeEasy</h1>
+</header>
+
+<nav class="bg-blue-900 text-white text-center py-2">
+    <ul>
+        <form method="POST">
+            <button class="inline mx-4" name="action" value="Home">Home</button>
+            <button class="inline mx-4" name="action" value="About">About</button>
+            <button class="inline mx-4" name="action" value="Contact">Contact</button>
+        </form>
+    </ul>
+</nav>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-md mx-auto bg-white p-6 rounded shadow-lg">
+        <h1 class="text-2xl font-semibold mb-4">Profession Info</h1>
+        
+        <form action="/professional_info" method="POST">
+            <!-- Your Occupation -->
+            <div class="mb-4">
+                <label for="occupation" class="block text-gray-600">Your Occupation</label>
+                <input type="text" id="occupation" name="occupation" class="w-full p-2 border rounded" required>
+            </div>
+            
+            <!-- Skills -->
+            <div class="mb-4">
+                <label for="skills" class="block text-gray-600">Skills</label>
+                <input type="text" id="skills" name="skills" class="w-full p-2 border rounded" required>
+            </div>
+
+            <!-- Education -->
+            <div class="mb-4">
+                <label for="education" class="block text-gray-600">Education</label>
+                <input type="text" id="education" name="education" class="w-full p-2 border rounded" required>
+            </div>
+
+            <!-- Certifications -->
+            <div class="mb-4">
+                <label for="certifications" class="block text-gray-600">Certifications</label>
+                <input type="text" id="certifications" name="certifications" class="w-full p-2 border rounded" required>
+            </div>
+
+            <!-- Linked Accounts -->
+            <div class="mb-4">
+                <label for="linked-accounts" class="block text-gray-600">Linked Accounts</label>
+                <input type="text" id="linked-accounts" name="linked-accounts" class="w-full p-2 border rounded" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="linked-accounts" class="block text-gray-600">How Much Are You Going to Charge?</label>
+                <input type="number" pattern="[0-9]" id="payment" name="payment" class="w-full p-2 border rounded" required>
+            </div>
+
+
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+    <footer class="bg-gray-300 py-4 text-center">
+        <div class="container mx-auto text-gray-700">
+            <p>&copy; 2023 ServeEasy - Your Trusted Service Finder</p>
+        </div>
+    </footer>
+</body>
+</html>
