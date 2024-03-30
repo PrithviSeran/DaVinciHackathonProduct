@@ -14,7 +14,7 @@ customer_needs = {}
 service_provider_info = {}
 service_cost = {}
 
-openai.api_key = "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"
+openai.api_key = "API_KAY"
 
 @app.route("/", methods=["GET", "POST"]) 
 def index(): 
